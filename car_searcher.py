@@ -35,6 +35,7 @@ def pobierz_oferty(marka, model, cena_max):
 def ocen_atrakcyjnosc(oferty):
     if model:
         cechy = oferty[["Cena", "Rok"]]
+        oferty["Atrakcyjność"] = model.predict(cechy)
     else:
         oferty["Atrakcyjność"] = np.random.uniform(0, 1, len(oferty))  # Losowa wartość w przypadku braku modelu
     return oferty
