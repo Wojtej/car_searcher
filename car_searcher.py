@@ -1,3 +1,7 @@
+git add requirements.txt
+git commit -m "Added joblib to requirements.txt"
+git push origin car_searcher
+
 import streamlit as st
 import webbrowser
 import pandas as pd
